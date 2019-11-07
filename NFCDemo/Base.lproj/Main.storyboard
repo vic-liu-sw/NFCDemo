@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NFCDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC_Data" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDg-Yi-MdB">
+                                <rect key="frame" x="29" y="37" width="297" height="269"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="J1y-z0-vne"/>
+                                    <constraint firstAttribute="height" constant="269" id="hTO-Ez-CU6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRM-AI-UZy">
+                                <rect key="frame" x="29" y="460" width="120" height="45"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="6uz-AL-bNJ"/>
+                                    <constraint firstAttribute="height" constant="45" id="QOe-R6-XgU"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Read"/>
+                                <connections>
+                                    <action selector="readTagButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dal-dh-caa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUp-N4-Bvn">
+                                <rect key="frame" x="206" y="460" width="120" height="45"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="8zV-lf-1Mj"/>
+                                    <constraint firstAttribute="width" constant="120" id="obO-YQ-u3S"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Write"/>
+                                <connections>
+                                    <action selector="writeTagButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Exh-Y4-gRv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPO-wO-Qe7">
+                                <rect key="frame" x="29" y="555" width="297" height="92"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="LxB-yp-5In"/>
+                                    <constraint firstAttribute="width" constant="297" id="hXn-NV-6dA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearDataButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tpa-S8-u0J"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFCTagType" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2j-IX-S3Y">
+                                <rect key="frame" x="29" y="345" width="297" height="68"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="HXJ-UO-DUb"/>
+                                    <constraint firstAttribute="height" constant="68" id="wFj-bu-14p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="E2j-IX-S3Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="1ga-f9-2xS"/>
+                            <constraint firstItem="cDg-Yi-MdB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="8fT-vC-XvG"/>
+                            <constraint firstItem="cDg-Yi-MdB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="CGH-lM-iFt"/>
+                            <constraint firstItem="E2j-IX-S3Y" firstAttribute="top" secondItem="cDg-Yi-MdB" secondAttribute="bottom" constant="39" id="UUx-OU-2bp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fPO-wO-Qe7" secondAttribute="bottom" constant="20" id="bCp-KA-wx3"/>
+                            <constraint firstItem="FRM-AI-UZy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="ek4-dx-bJ5"/>
+                            <constraint firstItem="FRM-AI-UZy" firstAttribute="top" secondItem="E2j-IX-S3Y" secondAttribute="bottom" constant="47" id="fFD-bz-5PK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fPO-wO-Qe7" secondAttribute="trailing" constant="49" id="g6D-HD-6pw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cDg-Yi-MdB" secondAttribute="trailing" constant="49" id="mjd-Hs-Zz7"/>
+                            <constraint firstItem="QUp-N4-Bvn" firstAttribute="top" secondItem="E2j-IX-S3Y" secondAttribute="bottom" constant="47" id="nHb-k7-sKa"/>
+                            <constraint firstItem="fPO-wO-Qe7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="nha-u0-mpb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E2j-IX-S3Y" secondAttribute="trailing" constant="49" id="vIr-eu-dDa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QUp-N4-Bvn" secondAttribute="trailing" constant="49" id="yfK-4X-HtM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ClearDataButton" destination="fPO-wO-Qe7" id="1qP-pu-bg3"/>
+                        <outlet property="ReadTagButton" destination="FRM-AI-UZy" id="kmf-U1-EEk"/>
+                        <outlet property="TagDataLabel" destination="cDg-Yi-MdB" id="6EX-F3-ksD"/>
+                        <outlet property="TagTypeLabel" destination="E2j-IX-S3Y" id="Eh9-Dw-tgL"/>
+                        <outlet property="WriteTagButton" destination="QUp-N4-Bvn" id="Abq-Z2-qqB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="116.49175412293854"/>
+        </scene>
+        <!--Write View Controller-->
+        <scene sceneID="y6D-9F-0lk">
+            <objects>
+                <viewController storyboardIdentifier="writeVC" id="s4n-oW-ac9" customClass="WriteViewController" customModule="NFCDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R9f-t2-65d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="writeData" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEf-8H-I0W">
+                                <rect key="frame" x="32" y="41" width="305" height="309"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="309" id="0lh-om-sxD"/>
+                                    <constraint firstAttribute="width" constant="305" id="2gQ-Rj-RP6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjh-g6-xXV">
+                                <rect key="frame" x="32" y="415" width="133" height="65"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="0aZ-uc-FuV"/>
+                                    <constraint firstAttribute="width" constant="133" id="yh2-nI-VEl"/>
+                                </constraints>
+                                <state key="normal" title="writeData">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="writeDataButton:" destination="s4n-oW-ac9" eventType="touchUpInside" id="8dQ-Xg-Vs9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahe-mH-2Mf">
+                                <rect key="frame" x="204" y="415" width="133" height="65"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="6IX-NP-iz6"/>
+                                    <constraint firstAttribute="width" constant="133" id="AF2-SU-jXg"/>
+                                </constraints>
+                                <state key="normal" title="writeLock">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="writeLockButton:" destination="s4n-oW-ac9" eventType="touchUpInside" id="90J-kS-jNq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jF-yM-Pbs">
+                                <rect key="frame" x="109" y="535" width="157" height="72"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="CZY-C5-byJ"/>
+                                    <constraint firstAttribute="width" constant="157" id="xAe-Ij-53u"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="s4n-oW-ac9" eventType="touchUpInside" id="LhR-5A-uk6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EEf-8H-I0W" firstAttribute="top" secondItem="sbp-RK-IaW" secondAttribute="top" constant="41" id="7lg-Iy-wB4"/>
+                            <constraint firstItem="sbp-RK-IaW" firstAttribute="bottom" secondItem="3jF-yM-Pbs" secondAttribute="bottom" constant="60" id="CHT-Ra-X2l"/>
+                            <constraint firstItem="Qjh-g6-xXV" firstAttribute="top" secondItem="EEf-8H-I0W" secondAttribute="bottom" constant="65" id="NXQ-cm-9O2"/>
+                            <constraint firstItem="sbp-RK-IaW" firstAttribute="trailing" secondItem="EEf-8H-I0W" secondAttribute="trailing" constant="38" id="RDa-W0-Gwc"/>
+                            <constraint firstItem="EEf-8H-I0W" firstAttribute="leading" secondItem="sbp-RK-IaW" secondAttribute="leading" constant="32" id="TpX-On-6B0"/>
+                            <constraint firstItem="Qjh-g6-xXV" firstAttribute="leading" secondItem="sbp-RK-IaW" secondAttribute="leading" constant="32" id="TtY-kT-LVb"/>
+                            <constraint firstItem="sbp-RK-IaW" firstAttribute="trailing" secondItem="ahe-mH-2Mf" secondAttribute="trailing" constant="38" id="c6V-AC-nDA"/>
+                            <constraint firstItem="ahe-mH-2Mf" firstAttribute="top" secondItem="EEf-8H-I0W" secondAttribute="bottom" constant="65" id="cvm-TF-xmZ"/>
+                            <constraint firstItem="sbp-RK-IaW" firstAttribute="trailing" secondItem="3jF-yM-Pbs" secondAttribute="trailing" constant="109" id="nRY-tU-V3Q"/>
+                            <constraint firstItem="3jF-yM-Pbs" firstAttribute="leading" secondItem="sbp-RK-IaW" secondAttribute="leading" constant="109" id="s1L-Y3-q7h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sbp-RK-IaW"/>
+                    </view>
+                    <connections>
+                        <outlet property="BackButton" destination="3jF-yM-Pbs" id="dH2-2A-b5Z"/>
+                        <outlet property="WriteDataButton" destination="Qjh-g6-xXV" id="2Yr-sb-Cfp"/>
+                        <outlet property="WriteDataLabel" destination="EEf-8H-I0W" id="45b-ek-R8u"/>
+                        <outlet property="WriteLockButton" destination="ahe-mH-2Mf" id="m8y-8G-TNT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dhn-UB-Dgm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114.4000000000001" y="116.49175412293854"/>
+        </scene>
+    </scenes>
+</document>
